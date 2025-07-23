@@ -8,6 +8,8 @@ type HomeProps = {
   allPostsData: Post[]
 }
 
+type Category = 'All' | 'Technology' | 'Design' | 'Business' | 'Lifestyle' | 'Health' | string
+
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData()
   return {
@@ -19,13 +21,11 @@ export async function getStaticProps() {
 
 export default function Home({ allPostsData }: HomeProps) {
   const [searchTerm, setSearchTerm] = useState('')
-  const [activeCategory, setActiveCategory] = useState('All')
+  const [activeCategory, setActiveCategory] = useState<Category>('All')
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768)
       if (window.innerWidth > 768) {
         setIsMenuOpen(false)
       }
@@ -49,7 +49,6 @@ export default function Home({ allPostsData }: HomeProps) {
 
   const categories = ['All', ...Array.from(new Set(allPostsData.map(post => post.category).filter(Boolean)))]
 
-  // Unique background colors for categories
   const categoryColors: Record<string, string> = {
     Technology: '#e3f2fd',
     Design: '#e8f5e9',
@@ -66,7 +65,6 @@ export default function Home({ allPostsData }: HomeProps) {
         <meta name="description" content="A modern blog with Next.js" />
       </Head>
 
-      {/* Навигация */}
       <nav className={styles.navbar}>
         <div className={styles.navContainer}>
           <Link href="/" className={styles.logo}>
@@ -106,9 +104,7 @@ export default function Home({ allPostsData }: HomeProps) {
         </div>
       </nav>
 
-      {/* Основное содержимое */}
       <main className={styles.main}>
-        {/* Поиск и фильтры */}
         <section className={styles.searchSection}>
           <div className={styles.searchContainer}>
             <input
@@ -130,7 +126,7 @@ export default function Home({ allPostsData }: HomeProps) {
               <button
                 key={category}
                 className={`${styles.categoryBtn} ${activeCategory === category ? styles.activeCategory : ''}`}
-                onClick={() => setActiveCategory(category)}
+                onClick={() => category && setActiveCategory(category)}
               >
                 {category}
               </button>
@@ -138,7 +134,6 @@ export default function Home({ allPostsData }: HomeProps) {
           </div>
         </section>
 
-        {/* Основные статьи */}
         <section className={styles.postsSection}>
           <h2 className={styles.sectionTitle}>Featured Articles</h2>
 
@@ -175,7 +170,6 @@ export default function Home({ allPostsData }: HomeProps) {
           </div>
         </section>
 
-        {/* Слайдер статей */}
         {sliderPosts.length > 0 && (
           <section className={styles.sliderSection}>
             <h2 className={styles.sectionTitle}>More Articles</h2>
@@ -220,8 +214,6 @@ export default function Home({ allPostsData }: HomeProps) {
     </div>
   )
 }
-
-// Вспомогательные функции для цветов категорий
 
 function getCategoryBorderColor(category: string): string {
   switch (category) {
