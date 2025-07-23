@@ -2,19 +2,20 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 
-// ✅ Тип поста
-type Post = {
+// Тип поста
+export type Post = {
   slug: string
   title: string
   date: string
   readTime?: string
   category?: string
   image?: string
+  excerpt?: string
 }
 
 const postsDirectory = path.join(process.cwd(), 'posts')
 
-// ✅ Получение отсортированных данных
+// Получение отсортированных данных
 export function getSortedPostsData(): Post[] {
   const fileNames = fs.readdirSync(postsDirectory)
   const allPostsData: Post[] = fileNames.map(fileName => {
@@ -29,30 +30,22 @@ export function getSortedPostsData(): Post[] {
       date: matterResult.data.date,
       readTime: matterResult.data.readTime,
       category: matterResult.data.category,
-      image: matterResult.data.image || '/default-post.jpg'
+      image: matterResult.data.image || '/default-post.jpg',
+      excerpt: matterResult.data.excerpt || ''
     }
   })
 
-  return allPostsData.sort((a, b) => {
-    if (a.date < b.date) {
-      return 1
-    } else {
-      return -1
-    }
-  })
+  return allPostsData.sort((a, b) => (a.date < b.date ? 1 : -1))
 }
 
 // Получение всех идентификаторов постов для [slug].tsx
 export function getAllPostIds() {
   const fileNames = fs.readdirSync(postsDirectory)
-
-  return fileNames.map(fileName => {
-    return {
-      params: {
-        slug: fileName.replace(/\.md$/, '')
-      }
+  return fileNames.map(fileName => ({
+    params: {
+      slug: fileName.replace(/\.md$/, '')
     }
-  })
+  }))
 }
 
 // Получение одного поста по slug
