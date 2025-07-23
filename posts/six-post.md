@@ -1,5 +1,5 @@
 ---
-title: "Мой пост"
+title: "My Post"
 date: "2025-07-23"
 readTime: "5 min"
 category: "news"
