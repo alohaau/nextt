@@ -1,15 +1,22 @@
-// В components/PostCard.tsx
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 
-export default function PostCard({ post }) {
+type Post = {
+  title: string
+  slug: string
+  date: string
+  readTime: string
+  image?: string
+  category: string
+}
+
+export default function PostCard({ post }: { post: Post }) {
   return (
     <motion.article 
       whileHover={{ y: -8 }}
       className="relative group overflow-hidden rounded-2xl shadow-2xl h-[400px]"
     >
-      {/* Реальное изображение вместо градиента */}
       <div className="absolute inset-0 z-0">
         <Image 
           src={post.image || '/default-cover.jpg'}
@@ -20,9 +27,7 @@ export default function PostCard({ post }) {
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
       </div>
 
-      {/* Контент */}
       <div className="relative z-10 h-full flex flex-col justify-end p-6">
-        {/* Категория с анимацией */}
         <motion.span 
           initial={{ x: -20, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -32,21 +37,18 @@ export default function PostCard({ post }) {
           {post.category}
         </motion.span>
 
-        {/* Заголовок с эффектом "масштабирования" при hover */}
         <h3 className="text-2xl font-bold text-white mb-3 transition-all duration-300 group-hover:text-amber-400">
           <Link href={`/posts/${post.slug}`} className="hover:underline">
             {post.title}
           </Link>
         </h3>
 
-        {/* Мета-данные */}
         <div className="flex items-center text-sm text-white/80 mb-4">
           <span>{post.date}</span>
           <span className="mx-2">•</span>
           <span>{post.readTime}</span>
         </div>
 
-        {/* Кнопка с эффектом "скольжения" */}
         <div className="overflow-hidden">
           <motion.div
             initial={{ y: 50 }}
