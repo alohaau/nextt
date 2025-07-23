@@ -1,9 +1,9 @@
 ---
-title: "Ultimate Guide to Theme Park Ticket Options"
-date: "2023-11-20"
-excerpt: "Learn about different ticket types and smart planning strategies for major theme parks"
-category: "Travel"
-image: "/images/theme-park-tickets.jpg"
+title: "Мой пост"
+date: "2025-07-23"
+readTime: "5 min"
+category: "news"
+image: "/image.jpg"
 ---
 
 ## Understanding Theme Park Admission Systems
