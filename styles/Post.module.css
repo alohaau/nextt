@@ -1,0 +1,142 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navigation - Same as homepage */
+.navbar {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Main content */
+.main {
+  flex: 1;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  width: 100%;
+}
+
+.article {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.header {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1.5rem;
+}
+
+.category {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  background: #e3f2fd;
+  color: #0d47a1;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 2.2rem;
+  margin: 0 0 1rem;
+  line-height: 1.3;
+  color: #2c3e50;
+}
+
+.meta {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+}
+
+.content {
+  line-height: 1.8;
+  color: #34495e;
+}
+
+/* Markdown content styles */
+.content h2 {
+  font-size: 1.6rem;
+  margin: 2.5rem 0 1rem;
+  color: #2c3e50;
+  border-bottom: 2px solid #f1f1f1;
+  padding-bottom: 0.5rem;
+}
+
+.content h3 {
+  font-size: 1.3rem;
+  margin: 2rem 0 1rem;
+}
+
+.content p {
+  margin-bottom: 1.5rem;
+}
+
+.content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.content th, .content td {
+  padding: 0.8rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.content th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+}
+
+.content blockquote {
+  border-left: 4px solid #3498db;
+  padding-left: 1.5rem;
+  margin: 1.5rem 0;
+  color: #7f8c8d;
+  font-style: italic;
+}
+
+/* Footer - Same as homepage */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 3rem 0 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .article {
+    padding: 1.5rem;
+  }
+  
+  .title {
+    font-size: 1.8rem;
+  }
+  
+  .content h2 {
+    font-size: 1.4rem;
+  }
+}

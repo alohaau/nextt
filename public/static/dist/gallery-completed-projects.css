@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+
+
+
+
+
+.gallery__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.gallery__thumb {
+  margin: 6px;
+  display: block;
+}
+.gallery__selector {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+}
+.gallery__selector:checked + .gallery__img {
+  opacity: 1;
+}
+.gallery__selector:checked ~ .gallery__thumb > img {
+  box-shadow: 0 0 0 3px #3dc344;
+}
+
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Расстояние между элементами */
+  justify-content: space-between; /* Выравнивание */
+}
+
+.photo {
+  width: calc(100% / 5 - 10px); /* Задаем ширину на больших экранах (3 в ряд) */
+}
+
+@media screen and (max-width: 440px) {
+  .photo {
+    width: calc(50% - 5px); /* Ширина для отображения по 2 в ряд */
+  }
+}

@@ -1,0 +1,231 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import 'https://cdn.jsdelivr.net/npm/@tailwindcss/typography@0.5.9/dist/typography.min.css';
+
+.prose {
+  @apply prose prose-lg;
+}
+@keyframes blob {
+  0% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0px, 0px) scale(1); }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+.swiper-pagination-bullet {
+  @apply bg-white/30 w-2.5 h-2.5 mx-1 opacity-100 transition-all duration-300;
+}
+.swiper-pagination-bullet-active {
+  @apply bg-cyan-400 w-3 h-3;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes blob {
+  0% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0px, 0px) scale(1); }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+.swiper-pagination-bullet {
+  @apply bg-white/30 w-2.5 h-2.5 mx-1 opacity-100 transition-all duration-300;
+}
+.swiper-pagination-bullet-active {
+  @apply bg-cyan-400 w-3 h-3;
+}
+
+/* Кастомный скроллбар */
+::-webkit-scrollbar {
+  @apply w-2;
+}
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-blue-600 rounded-full;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes blob {
+  0% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0px, 0px) scale(1); }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.navLinks {
+  display: flex;
+  gap: 20px;
+}
+
+.navLink {
+  color: #4b5563;
+  font-weight: 500;
+}
+
+.navLink:hover {
+  color: #1e40af;
+}
+
+.ctaButton {
+  background-color: #2563eb;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.searchBar {
+  display: flex;
+  margin: 30px 0;
+  gap: 15px;
+}
+
+.searchInput {
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  width: 300px;
+}
+
+.categoryFilters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.categoryButton {
+  padding: 6px 12px;
+  border-radius: 9999px;
+  font-size: 14px;
+}
+
+.categoryButton.active {
+  background-color: #2563eb;
+  color: white;
+}
+
+.categoryButton.inactive {
+  background-color: #f3f4f6;
+  color: #4b5563;
+}
+
+.postGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.postCard {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.postImage {
+  height: 180px;
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.postContent {
+  padding: 20px;
+}
+
+.postMeta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #6b7280;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.postCategory {
+  background-color: #dbeafe;
+  color: #1e40af;
+  padding: 4px 8px;
+  border-radius: 9999px;
+  font-weight: 500;
+}
+
+.postTitle {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+.postExcerpt {
+  color: #6b7280;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.readMore {
+  color: #2563eb;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}

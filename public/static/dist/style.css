@@ -1,0 +1,98 @@
+button,input,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0;}
+button,input{overflow:visible;}
+button{text-transform:none;}
+button,[type="submit"]{-webkit-appearance:button;}
+textarea{overflow:auto;font-family:inherit;}
+/*! CSS Used from: https://lendator.ru/test7-1414235253325/assets/css/header.css */
+button,input,textarea{font-family:"Open Sans", sans-serif;font-size:100%;line-height:1.15;margin:0;}
+button,input{overflow:visible;}
+button{text-transform:none;}
+button,[type="submit"]{-webkit-appearance:button;}
+textarea{overflow:auto;font-family:inherit;}
+/*! CSS Used from: https://lendator.ru/test7-1414235253325/assets/css/temp_g_styles.css */
+button,input,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0;}
+button,input{overflow:visible;}
+button{text-transform:none;}
+button,[type="submit"]{-webkit-appearance:button;}
+textarea{overflow:auto;font-family:inherit;}
+/*! CSS Used from: https://lendator.ru/test7-1414235253325/assets/css/temp_g_styles_1.css */
+button,input,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0;}
+button,input{overflow:visible;}
+button{text-transform:none;}
+button,[type="submit"]{-webkit-appearance:button;}
+textarea{overflow:auto;font-family:inherit;}
+/*! CSS Used from: https://lendator.ru/test7-1414235253325/assets/css/page.scss.css */
+.mg-marketplace-form__note{font-size:12px;line-height:16px;color:#333;margin-top:24px;text-align:center;}
+@media (min-width: 600px){
+.mg-marketplace-form__note{font-size:14px;line-height:24px;}
+}
+@media (min-width: 1025px){
+.mg-marketplace-form__note{font-size:14px;line-height:24px;margin-top:40px;}
+}
+/*! CSS Used from: https://lendator.ru/test7-1414235253325/assets/css/temp_g_styles.css */
+button,input,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0;}
+button,input{overflow:visible;}
+button{text-transform:none;}
+button,[type="submit"]{-webkit-appearance:button;}
+textarea{overflow:auto;font-family:inherit;}
+/*! CSS Used from: https://lendator.ru/test7-1414235253325/assets/css/footer.css */
+.mg-popup-form{position:fixed;left:0;right:0;top:0;bottom:0;background:rgba(0, 0, 0, .5);opacity:0;z-index:-5;}
+.mg-popup-wrap{position:absolute;left:0;right:0;top:0;bottom:0;overflow:auto;text-align:center;}
+.mg-popup-wrap:after{content:"";display:inline-block;width:0;height:100%;vertical-align:middle;}
+.mg-popup-form._opened{opacity:1;transition:opacity 0.3s;z-index:1111;}
+.mg-popup-form__inner{background:#fff;width:80%;max-width:464px;display:inline-block;vertical-align:middle;position:relative;margin-top:40px;box-sizing:border-box;padding:32px 16px;border-radius:10px;text-align:left;}
+.mg-popup-form__close{width:48px;height:48px;box-shadow:0 5px 3px -3px hsla(0, 0%, 69%, .27), inset 0 0 0 2px #dfdfdf;border-radius:50%;background-color:#fafaf9;border:none;padding:8px;outline:0;position:absolute;top:-18px;box-sizing:border-box;right:-14px;transition:all 0.15s;cursor:pointer;}
+.mg-popup-form__close:hover{box-shadow:0 6px 4px -4px rgba(130, 166, 233, .27), inset 0 0 0 2px #a3c0ea;background-color:#d9e4f5;}
+.mg-popup-form__close:active{background-color:#a4bfe9;box-shadow:none;}
+.mg-popup-form__title{font-weight:700;letter-spacing:-.4px;text-align:center;color:#333;margin-top:0;font-size:24px;margin-bottom:16px;}
+.mg-popup-form__close > *{width:100%;height:100%;}
+.mg-popup-form .mg-form__field{margin-bottom:16px;}
+.mg-popup-form .mg-form__field-control input[type="text"],.mg-popup-form .mg-form__field-control textarea{color:#333;font-family:"Fira Sans", sans-serif;padding:10px 14px;-webkit-box-sizing:border-box;box-sizing:border-box;outline:0;font-size:15px;font-weight:400;line-height:24px;letter-spacing:-.4px;height:40px;border:2px solid #dfdfdf;border-radius:6px;background-color:#fff;width:100%;transition:all 0.15s;}
+.mg-popup-form .mg-form__field-control textarea{height:80px;}
+.mg-popup-form .mg-form__field-control input[type="text"]:hover,.mg-popup-form .mg-form__field-control textarea:hover{border-color:#a3c0ea;}
+.mg-popup-form .mg-form__field-control input[type="text"]:focus,.mg-popup-form .mg-form__field-control textarea:focus{box-shadow:0 6px 4px -4px rgba(130, 165, 233, .27);border-color:#82a5e9;background-color:#f2f7ff;}
+.mg-popup-form .mg-form__field-button{text-align:center;}
+.mg-popup-form .mg-form__field-button{margin-top:24px;margin-bottom:0;}
+.mg-popup-form .mg-form__field-button button{width:100%;outline:0;text-decoration:none;color:#fff;font-size:15px;font-weight:500;line-height:24px;letter-spacing:-.19px;padding:8px 24px;border:none;box-shadow:0 6px 4px -4px #acd6a2, inset 0 0 0 2px #10a03b;border-radius:24px;background-color:#1eb34b;transition:all 0.15s;cursor:pointer;-webkit-appearance:none;box-sizing:border-box;}
+.mg-popup-form .mg-form__field-button button:hover{box-shadow:0 5px 3px -3px #acd6a2, inset 0 0 0 2px #3cae5e;background-color:#51c568;}
+.mg-popup-form .mg-form__field-button button:active{background-color:#37a458;box-shadow:none;}
+@media all and (min-width: 640px){
+.mg-popup-form__inner{padding:32px;}
+.mg-popup-form__title{font-size:32px;margin-bottom:24px;}
+.mg-popup-form .mg-form__field-control input[type="text"]{height:48px;}
+.mg-popup-form .mg-form__field-button button{width:auto;padding:12px 40px;}
+}
+/*! CSS Used from: https://lendator.ru/test7-1414235253325/assets/css/footer.css */
+.mg-popup-form{position:fixed;left:0;right:0;top:0;bottom:0;background:rgba(0, 0, 0, .5);opacity:0;z-index:-5;}
+.mg-popup-wrap{position:absolute;left:0;right:0;top:0;bottom:0;overflow:auto;text-align:center;}
+.mg-popup-wrap:after{content:"";display:inline-block;width:0;height:100%;vertical-align:middle;}
+.mg-popup-form._opened{opacity:1;transition:opacity 0.3s;z-index:1111;}
+.mg-popup-form__inner{background:#fff;width:80%;max-width:464px;display:inline-block;vertical-align:middle;position:relative;margin-top:40px;box-sizing:border-box;padding:32px 16px;border-radius:10px;text-align:left;}
+.mg-popup-form__close{width:48px;height:48px;box-shadow:0 5px 3px -3px hsla(0, 0%, 69%, .27), inset 0 0 0 2px #dfdfdf;border-radius:50%;background-color:#fafaf9;border:none;padding:8px;outline:0;position:absolute;top:-18px;box-sizing:border-box;right:-14px;transition:all 0.15s;cursor:pointer;}
+.mg-popup-form__close:hover{box-shadow:0 6px 4px -4px rgba(130, 166, 233, .27), inset 0 0 0 2px #a3c0ea;background-color:#d9e4f5;}
+.mg-popup-form__close:active{background-color:#a4bfe9;box-shadow:none;}
+.mg-popup-form__title{font-weight:700;letter-spacing:-.4px;text-align:center;color:#333;margin-top:0;font-size:24px;margin-bottom:16px;}
+.mg-popup-form__close > *{width:100%;height:100%;}
+.mg-popup-form .mg-form__field{margin-bottom:16px;}
+.mg-popup-form .mg-form__field-control input[type="text"],.mg-popup-form .mg-form__field-control textarea{color:#333;font-family:"Fira Sans", sans-serif;padding:10px 14px;-webkit-box-sizing:border-box;box-sizing:border-box;outline:0;font-size:15px;font-weight:400;line-height:24px;letter-spacing:-.4px;height:40px;border:2px solid #dfdfdf;border-radius:6px;background-color:#fff;width:100%;transition:all 0.15s;}
+.mg-popup-form .mg-form__field-control textarea{height:80px;}
+.mg-popup-form .mg-form__field-control input[type="text"]:hover,.mg-popup-form .mg-form__field-control textarea:hover{border-color:#a3c0ea;}
+.mg-popup-form .mg-form__field-control input[type="text"]:focus,.mg-popup-form .mg-form__field-control textarea:focus{box-shadow:0 6px 4px -4px rgba(130, 165, 233, .27);border-color:#82a5e9;background-color:#f2f7ff;}
+.mg-popup-form .mg-form__field-button{text-align:center;}
+.mg-popup-form .mg-form__field-button{margin-top:24px;margin-bottom:0;}
+.mg-popup-form .mg-form__field-button button{width:100%;outline:0;text-decoration:none;color:#fff;font-size:15px;font-weight:500;line-height:24px;letter-spacing:-.19px;padding:8px 24px;border:none;background: linear-gradient(180deg, #4d9dff 0%, #2166ba 100%); box-shadow: 0px 8px 12px rgba(53, 119, 250, 0.422);border-radius:24px;transition:all 0.15s;cursor:pointer;-webkit-appearance:none;box-sizing:border-box;}
+.mg-popup-form .mg-form__field-button button:hover{box-shadow:0 5px 3px -3px #acd6a2, inset 0 0 0 2px #3cae5e;background-color:#51c568;}
+.mg-popup-form .mg-form__field-button button:active{background-color:#37a458;box-shadow:none;}
+@media all and (min-width: 640px){
+.mg-popup-form__inner{padding:32px;}
+.mg-popup-form__title{font-size:32px;margin-bottom:24px;}
+.mg-popup-form .mg-form__field-control input[type="text"]{height:48px;}
+.mg-popup-form .mg-form__field-button button{width:auto;padding:12px 40px;}
+}
+/*! CSS Used fontfaces */
+@font-face{font-family:'Open Sans';src:url('https://lendator.ru/test7-1414235253325/assets/fonts/open_sans-r.woff2') format('woff2'), 		 url('https://lendator.ru/test7-1414235253325/assets/fonts/open_sans-r.woff') format('woff');font-weight:normal;font-style:normal;font-display:swap;}
+@font-face{font-family:'Open Sans';src:url('https://lendator.ru/test7-1414235253325/assets/fonts/open_sans-b.woff2') format('woff2'), 		 url('https://lendator.ru/test7-1414235253325/assets/fonts/open_sans-b.woff') format('woff');font-weight:700;font-style:normal;font-display:swap;}
+@font-face{font-family:'Open Sans';src:url('https://lendator.ru/test7-1414235253325/assets/fonts/open_sans-i.woff2') format('woff2'), 		 url('https://lendator.ru/test7-1414235253325/assets/fonts/open_sans-i.woff') format('woff');font-weight:normal;font-style:italic;font-display:swap;}
+@font-face{font-family:'Open Sans';src:url('https://lendator.ru/test7-1414235253325/assets/fonts/open_sans-s-b.woff2') format('woff2'), 		 url('https://lendator.ru/test7-1414235253325/assets/fonts/open_sans-s-b.woff') format('woff');font-weight:600;font-style:normal;font-display:swap;}
+@font-face{font-family:'Open Sans';src:url('https://lendator.ru/test7-1414235253325/assets/fonts/open_sans-b-i.woff2') format('woff2'), 		 url('https://lendator.ru/test7-1414235253325/assets/fonts/open_sans-b-i.woff') format('woff');font-weight:700;font-style:italic;font-display:swap;}
+

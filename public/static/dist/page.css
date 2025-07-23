@@ -1,0 +1,769 @@
+.mp-footer {background: #fff;}
+
+.hide {display: none !important;}
+
+.mg-paysystem-header {
+	padding: 56px 0;
+	background: #F7F7FA;
+	text-align: center;
+	font-family: "Montserrat", sans-serif;
+}
+
+.mg-paysystem-header__title {
+	font-weight: 500;
+	font-size: 22px;
+	line-height: 32px;
+	color: #000000;
+	margin-bottom: 16px;
+}
+
+.mg-paysystem-header__text {
+	font-size: 16px;
+	line-height: 26px;
+	letter-spacing: 0;
+	color: #444444;
+	margin-bottom: 32px;
+}
+
+.mg-paysystem-header__list {
+	display: grid;
+	grid-gap: 16px;
+}
+
+.mg-paysystem-header__item {
+	background: #FFFFFF;
+	border-radius: 16px;
+	padding: 24px;
+}
+
+.mg-paysystem-header__item-ico {display: none;}
+
+.mg-paysystem-header__item-text {
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 0;
+	color: #000000;
+}
+
+.mg-paysystem-header__item-text a {
+	text-decoration: none;
+	color: #1A66FF;
+	position: relative;
+	display: inline-block;
+}
+
+.mg-paysystem-header__item-text a:before {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 103%;
+	height: 1px;
+	background: currentColor;
+	content: "";
+	transition: all 0.2s;
+}
+
+.mg-paysystem-header__item-text a:hover:before {
+	transform: translateY(4px);
+	opacity: 0;
+}
+
+@media all and (min-width: 640px) {
+	.mg-paysystem-header {padding: 80px 0;}
+	.mg-paysystem-header__title {
+		font-size: 32px;
+		line-height: 40px;
+	}
+	
+	.mg-paysystem-header__text {
+		font-size: 18px;
+		line-height: 28px;
+	}
+	
+	.mg-paysystem-header__item {
+		display: flex;
+		padding: 32px;
+	}
+	
+	.mg-paysystem-header__item-ico {
+		display: block;
+		flex: none;
+		margin-right: 16px;
+	}
+	
+	.mg-paysystem-header__item-text {text-align: left;}
+}
+
+@media all and (min-width: 960px) {
+	.mg-paysystem-header__list {grid-template-columns: repeat(2, 1fr); grid-gap: 32px;}
+}
+
+@media all and (min-width: 1200px) {
+	.mg-paysystem-header__title {
+		font-size: 40px;
+		line-height: 48px;
+	}
+	
+	.mg-paysystem-header__text {
+		font-size: 20px;
+		line-height: 32px;
+		margin-bottom: 40px;
+	}
+}
+
+.mg-paysystem-list {
+	padding: 48px 0;
+	font-family: "Montserrat", sans-serif;
+}
+
+.mg-paysystem-list__navigation-wrap {
+	margin-bottom: 40px;
+}
+
+.mg-paysystem-list__navigation-mobile {
+	position: relative;
+}
+
+.mg-paysystem-list__navigation-mobile-input {
+	cursor: pointer;
+	position: relative;
+	display: flex;
+	align-items: center;
+	background: #F7F7FA;
+	border-radius: 72px;
+	padding: 19px 20px;
+}
+
+.mg-paysystem-list__navigation-mobile-input:after {
+	content: "";
+	width: 18px;
+	height: 18px;
+	background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m4.5 6.75 4.5 4.5 4.5-4.5' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+	margin-left: 16px;
+}
+
+.mg-paysystem-list__navigation-mobile-select-wrapper {
+	margin-top: 8px;
+	height: 0;
+	overflow: hidden;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+	z-index: 2;
+	transition: height 0.5s;
+}
+
+.mg-paysystem-list__navigation-mobile-select {
+	background: #F7F7FA;
+	border-radius: 16px;
+	overflow: hidden;
+}
+
+.mg-paysystem-list__navigation-mobile-item {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	padding: 19px;
+	border: none;
+	margin: 0;
+	background: none;
+	outline: none;
+	box-sizing: border-box;
+	transition: all 0.2s;
+}
+
+.mg-paysystem-list__navigation-mobile-item.active {display: none;}
+
+.mg-paysystem-list__navigation-mobile-item:hover {
+	background: #EBEBF2;
+}
+
+.mg-paysystem-list__navigation-mobile-item:last-child .mg-paysystem-list__navigation-mobile-item-title {color: #BBBBBB;}
+
+.mg-paysystem-list__navigation-mobile-item-ico {
+	flex: none;
+	font-size: 0;
+	margin-right: 16px;
+}
+
+.mg-paysystem-list__navigation-mobile-item-title {
+	flex: 1 0 1%;
+	text-align: left;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 18px;
+	color: #7C7C7C;
+}
+
+.mg-paysystem-list__navigation-desktop {display: none;}
+
+.mg-paysystem-list__navigation-filter {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 12px;
+	margin-top: 16px;
+}
+
+.mg-paysystem-list__navigation-filter-item {
+	display: flex;
+	align-items: center;
+	border: 1px solid #F1F1F2;
+	border-radius: 72px;
+	padding: 18px 16px 18px 13px;
+	transition: all 0.2s;
+	cursor: pointer;
+}
+
+.mg-paysystem-list__navigation-filter-item:hover {
+	border-color: #1CA345;
+}
+
+.mg-paysystem-list__navigation-filter-checkbox {
+	flex: none;
+	width: 18px;
+	height: 18px;
+	margin-right: 8px;
+	position: relative;
+}
+
+.mg-paysystem-list__navigation-filter-checkbox input {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	opacity: 0;
+}
+
+.mg-paysystem-list__navigation-filter-checkbox span {
+	display: block;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	border: 1px solid #DDDDDD;
+	border-radius: 80px;
+	transition: all 0.2s;
+}
+
+.mg-paysystem-list__navigation-filter-checkbox input:checked ~ span {
+	border: 5px solid #1CA345;
+}
+
+.mg-paysystem-list__navigation-filter-title {
+	font-weight: 500;
+	font-size: 13px;
+	line-height: 18px;
+	color: #7C7C7C;
+}
+
+.mg-paysystem-list__box {
+	display: none;
+}
+.mg-paysystem-list__box.active {display: block;}
+
+.mg-paysystem-list__box-inner {
+	display: grid;
+	grid-gap: 16px;
+}
+
+.mg-paysystem-list__box-item {
+	background: #FFFFFF;
+	border: 1px solid #F1F1F2;
+	border-radius: 16px;
+	padding: 15px 16px 24px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+}
+
+.mg-paysystem-list__box-item-labels {
+	font-size: 0;
+	margin-bottom: 16px;
+}
+
+.mg-paysystem-list__box-item-labels div {
+	display: inline-block;
+	padding: 6px 10px;
+	font-weight: 700;
+	font-size: 10px;
+	line-height: 14px;
+	text-transform: uppercase;
+}
+
+.mg-paysystem-list__box-item-popular {color: #FF6565;}
+.mg-paysystem-list__box-item-free {color: #FBBB20;}
+
+.mg-paysystem-list__box-item-image {
+	font-size: 0;
+	text-align: center;
+	margin-bottom: 16px;
+	margin-top: auto;
+}
+
+.mg-paysystem-list__box-item-image img {
+	max-width: 100%;
+	height: auto;
+}
+
+.mg-paysystem-list__box-item-name {
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 24px;
+	text-align: center;
+	color: #333;
+}
+
+.mg-paysystem-list__box-item-name a {
+	color: #1A66FF;
+	text-decoration: none;
+}
+
+.mg-paysystem-list__box-item-phone {
+	text-align: center;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 24px;
+	color: #323232;
+	margin-top: 4px;
+}
+
+.mg-paysystem-list__box-item-phone a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.mg-paysystem-list__box-button {
+	display: block;
+	width: 100%;
+	background: #F7F7FA;
+	border-radius: 16px;
+	border: none;
+	outline: none;
+	padding: 16px 24px;
+	box-sizing: border-box;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 24px;
+	text-align: center;
+	color: #000000;
+	margin-top: 40px;
+	transition: all 0.2s;
+	cursor: pointer;
+	max-width: 682px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.mg-paysystem-list__box-button:hover {
+	background: #1CA345;
+	color: #fff;
+}
+
+.mg-paysystem-list__box-button:active {
+	#1A9941
+	color: #fff;
+}
+
+.mg-paysystem-list__text {
+	font-size: 16px;
+	line-height: 24px;
+	text-align: center;
+	letter-spacing: 0.2px;
+	margin-top: 40px;
+	color: #444444;
+}
+
+.mg-paysystem-list__text p {margin: 0;}
+
+.mg-paysystem-list__text p + p {margin-top: 16px;}
+
+.mg-paysystem-list__text a {
+	text-decoration: none;
+	color: #1A66FF;
+	position: relative;
+	display: inline-block;
+}
+
+.mg-paysystem-list__text a:before {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 103%;
+	height: 1px;
+	background: currentColor;
+	content: "";
+	transition: all 0.2s;
+}
+
+.mg-paysystem-list__text a:hover:before {
+	transform: translateY(4px);
+	opacity: 0;
+}
+
+@media all and (min-width: 640px) {
+	.mg-paysystem-list {
+		padding: 80px 0;
+	}
+	
+	.mg-paysystem-list__navigation-wrap {
+		display: grid;
+		grid-template-columns: 1fr 276px;
+		grid-gap: 24px;
+		margin-bottom: 48px;
+	}
+	
+	.mg-paysystem-list__navigation-mobile-input {
+		padding: 16px;
+	}
+	
+	.mg-paysystem-list__navigation-mobile-item {
+		padding: 16px 20px 16px 16px;
+	}
+	
+	.mg-paysystem-list__navigation-mobile-item-title {
+		font-size: 16px;
+		line-height: 24px;
+	}
+	
+	.mg-paysystem-list__navigation-filter {
+		margin-top: 0;
+		display: flex;
+	}
+	
+	.mg-paysystem-list__navigation-filter-item {
+		flex: none;
+		width: auto;
+		padding: 15px 19px 15px 15px;
+	}
+	
+	.mg-paysystem-list__navigation-filter-title {
+		font-size: 14px;
+		line-height: 24px;
+	}
+	
+	.mg-paysystem-list__box-inner {
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 32px;
+	}
+	
+	.mg-paysystem-list__box-button {margin-top: 48px;}
+	
+	.mg-paysystem-list__text {
+		margin-top: 64px;
+		font-size: 18px;
+		line-height: 28px;
+	}
+}
+
+@media all and (min-width: 1200px) {
+	.mg-paysystem-list__text {
+		margin-top: 80px;
+		font-size: 20px;
+		line-height: 32px;
+	}
+	
+	.mg-paysystem-list__navigation-wrap {
+		display: flex;
+		align-items: center;
+		grid-gap: 0;
+	}
+	
+	.mg-paysystem-list__navigation-desktop {
+		display: block;
+		border: 1px solid #F1F1F2;
+		border-radius: 48px;
+		font-size: 0;
+	}
+	
+	.mg-paysystem-list__navigation-desktop-button {
+		border: none;
+		background: none;
+		outline: none;
+		padding: 16px 20px 16px 16px;
+		margin: 0;
+		display: inline-flex;
+		vertical-align: middle;
+		align-items: center;
+		margin-top: -1px;
+		margin-bottom: -1px;
+		color: #BBBBBB;
+		transition: all 0.2s;
+		border-radius: 72px;
+		cursor: pointer;
+	}
+	
+	.mg-paysystem-list__navigation-desktop-button.active, .mg-paysystem-list__navigation-desktop-button:hover {
+		background: #F7F7FA;
+		color: #000;
+	}
+	
+	.mg-paysystem-list__navigation-desktop-button:last-child {
+		padding: 16px 24px;
+	}
+	
+	.mg-paysystem-list__navigation-desktop-button-ico {
+		margin-right: 8px;
+	}
+	
+	.mg-paysystem-list__navigation-desktop-button-title {
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 24px;
+		letter-spacing: 0.3px;
+	}
+	
+	.mg-paysystem-list__navigation-filter {
+		flex: none;
+		width: auto;
+		margin-left: auto;
+	}
+	
+	.mg-paysystem-list__navigation-mobile {
+		display: none;
+	}
+	
+	.mg-paysystem-list__box-inner {
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 32px;
+	}
+	
+	.mg-paysystem-list__box-item-labels {margin-bottom: 32px;}
+	
+	.mg-paysystem-list__text p + p {margin-top: 24px;}
+}
+
+@media all and (min-width: 1440px) {
+	.mg-paysystem-list__navigation-desktop-button-title {letter-spacing: 0.75px;}
+}
+
+.mg-paysystem-bottom {
+	background: #F7F7FA;
+	padding: 48px 0;
+	font-family: "Montserrat", sans-serif;
+}
+
+.mg-paysystem-bottom__inner {
+	display: grid;
+}
+
+.mg-paysystem-bottom__left-title {
+	font-weight: 500;
+	font-size: 22px;
+	line-height: 32px;
+	color: #000000;
+	margin-bottom: 32px;
+}
+
+.mg-paysystem-bottom__left-item {
+	display: flex;
+	align-items: flex-start;
+}
+
+.mg-paysystem-bottom__left-item-num {
+	flex: none;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 26px;
+	text-align: center;
+	width: 26px;
+	background: #1CA345;
+	border-radius: 50%;
+	margin-right: 14px;
+	color: #FFFFFF;
+}
+
+.mg-paysystem-bottom__left-item-text {
+	font-size: 16px;
+	line-height: 28px;
+	color: #444444;
+}
+
+.mg-paysystem-bottom__left-item + .mg-paysystem-bottom__left-item {margin-top: 24px;}
+
+.mg-paysystem-bottom__left-image {
+	font-size: 0;
+	margin-top: 24px;
+	text-align: center;
+}
+
+.mg-paysystem-bottom__left-image img {
+	max-width: 100%;
+	height: auto;
+}
+
+.mg-paysystem-bottom__right {
+	background: #fff;
+	padding: 32px;
+	box-shadow: 0px 8px 52px rgba(0, 0, 0, 0.04);
+	border-radius: 16px;	
+}
+
+.mg-paysystem-bottom__right-title {
+	font-weight: 500;
+	font-size: 22px;
+	line-height: 32px;
+	margin-bottom: 16px;
+	color: #000000;
+}
+
+.mg-paysystem-bottom__right-text {
+	font-size: 16px;
+	line-height: 24px;
+	margin-bottom: 24px;
+	color: #444444;
+}
+
+.mg-paysystem-bottom__right-note {
+	font-size: 13px;
+	line-height: 20px;
+	color: #999999;
+}
+
+@media all and (min-width: 640px) {
+	.mg-paysystem-bottom {
+		padding: 80px 0;
+	}
+	
+	.mg-paysystem-bottom__left-title {
+		font-size: 30px;
+		line-height: 38px;
+		max-width: 608px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	.mg-paysystem-bottom__left-list {
+		max-width: 608px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	.mg-paysystem-bottom__left-image {margin-top: 8px;}
+	
+	.mg-paysystem-bottom__right {
+		padding: 48px;
+	}
+	
+	.mg-paysystem-bottom__right-title {
+		font-size: 30px;
+		line-height: 38px;
+		margin-bottom: 24px;
+	}
+	
+	.mg-paysystem-bottom__right-text {
+		margin-bottom: 32px;
+		line-height: 28px;
+	}
+}
+
+@media all and (min-width: 960px) {
+	.mg-paysystem-bottom {
+		padding: 80px 0 0;
+	}
+	
+	.mg-paysystem-bottom__inner {
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 32px;
+	}
+	
+	.mg-paysystem-bottom__right {align-self: flex-start;}
+}
+
+@media all and (min-width: 1200px) {
+	.mg-paysystem-bottom__left-title {
+		font-size: 30px;
+		line-height: 38px;
+		max-width: 472px;
+	}
+	
+	.mg-paysystem-bottom__left-list {max-width: 472px;}
+	
+	.mg-paysystem-bottom__left-image {margin-top: 22px;}
+	
+	.mg-paysystem-bottom__right-title {
+		font-size: 30px;
+		line-height: 38px;
+		margin-bottom: 24px;
+	}
+}
+
+@media all and (min-width: 1440px) {
+	.mg-paysystem-bottom__right {padding: 56px;}
+	
+	.mg-paysystem-bottom__left-title {
+		max-width: 448px;
+	}
+	
+	.mg-paysystem-bottom__left-list {max-width: 448px;}
+}
+
+
+
+.mg-ap-main__button {
+	display: block;
+	margin-top: 16px;
+	color: #fff;
+	background: linear-gradient(180deg, #47C634 0%, #2DBF60 100%);
+	border: 1px solid #2FC05F;
+	box-shadow: 0px 8px 12px rgba(45, 191, 96, 0.30025);
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 24px;
+	padding: 19px;
+	box-sizing: border-box;
+	border-radius: 32px;
+}
+
+.mg-ap-main__button._secondary {
+	box-shadow: none;
+	border-color: transparent;
+	background: #fff;
+	color: #0369d9;
+}
+
+.mg-ap-main__button:hover {
+	background: linear-gradient(180deg, #51D53D 0%, #2DBF60 100%);
+	box-shadow: 0px 8px 12px rgba(45, 191, 96, 0.30025);
+}
+
+.mg-ap-main__button._secondary:hover {
+	background: #fff;
+	box-shadow: none;
+}
+
+.mg-ap-main__button:active {
+	background: linear-gradient(180deg, #2EBF5F 0%, #2EBF5F 100%);
+	box-shadow: none;
+}
+
+.mg-ap-main__button._secondary:active {
+	background: #fff;
+	border-color: transparent;
+}
+
+	
+	.mg-ap-main__button {
+		display: inline-block;
+		box-sizing: border-box;
+		padding: 19px 55px;
+		margin-top: 0;
+	}
+	
+	.mg-ap-main__button._secondary {margin-left: 8px;}
+	
+	.mg-ap-main__button {
+		padding: 23px 40px;
+		font-size: 18px;
+		line-height: 24px;
+		border-radius: 40px;
+	}
+	
+
+@media all and (min-width: 1200px) {
+	.mg-ap-main__button {
+		padding: 23px 55px;
+	}
+	
