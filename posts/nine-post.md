@@ -2,7 +2,7 @@
 title: "My Post"
 date: "2025-07-23"
 readTime: "5 min"
-category: "news"
+category: "Health"
 image: "/image.jpg"
 ---
 
