@@ -123,20 +123,17 @@ export default function Home({ allPostsData }: HomeProps) {
           <div className={`${styles.navMenu} ${isMenuOpen ? styles.navMenuOpen : ''}`}>
             <div className={styles.navLinks}>
               <Link href="/about" className={styles.navLink}>
-                About
+                About Us
               </Link>
-              <Link href="/categories" className={styles.navLink}>
-                Categories
+              <Link href="/pages" className={styles.navLink}>
+                Articles
               </Link>
               <Link href="/contact" className={styles.navLink}>
-                Contact
+                Privacy policy
               </Link>
             </div>
 
-            <div className={styles.authButtons}>
-              <button className={styles.loginBtn}>Login</button>
-              <button className={styles.signupBtn}>Sign Up</button>
-            </div>
+            
           </div>
         </div>
       </nav>
