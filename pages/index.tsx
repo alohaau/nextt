@@ -3,6 +3,8 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { getSortedPostsData, Post } from '../lib/posts';
 import styles from '../styles/Home.module.css';
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 type HomeProps = {
   allPostsData: Post[];
@@ -101,42 +103,7 @@ export default function Home({ allPostsData }: HomeProps) {
         })}
       </script>
 
-      <nav className={styles.navbar} aria-label="Main navigation">
-        <div className={styles.navContainer}>
-          <Link href="/" className={styles.logo} aria-label="Disney World Ticket Guide Home">
-            DisneyWorldTicket.com
-          </Link>
-
-          <button
-            className={styles.menuButton}
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle menu"
-            aria-expanded={isMenuOpen}
-          >
-            <div className={`${styles.menuIcon} ${isMenuOpen ? styles.menuIconOpen : ''}`}>
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </button>
-
-          <div className={`${styles.navMenu} ${isMenuOpen ? styles.navMenuOpen : ''}`}>
-            <div className={styles.navLinks}>
-              <Link href="/about" className={styles.navLink}>
-                About Us
-              </Link>
-              <Link href="/" className={styles.navLink}>
-                Articles
-              </Link>
-              <Link href="/privacy-policy" className={styles.navLink}>
-                Privacy policy
-              </Link>
-            </div>
-
-            
-          </div>
-        </div>
-      </nav>
+      
 
       <main className={styles.main}>
         <section className={styles.searchSection} aria-label="Search articles">
@@ -257,20 +224,7 @@ export default function Home({ allPostsData }: HomeProps) {
         )}
       </main>
 
-      <footer className={styles.footer}>
-        <div className={styles.footerContent}>
-          <div className={styles.footerLinks}>
-            <Link href="/about">About Us</Link>
-            <Link href="/">Articles</Link>
-            <Link href="/privacy-policy">Privacy policy</Link>
-          </div>
-          <p>&copy; {new Date().getFullYear()} DisneyWorldTicket.com - Independent Theme Park Resource. Not affiliated with The Walt Disney Company.</p>
-          <p className={styles.disclaimer}>
-            All information provided is based on personal experience and research. Prices, policies, and attractions are subject to change.
-            All trademarks are property of their respective owners.
-          </p>
-        </div>
-      </footer>
+      
     </div>
   );
 }

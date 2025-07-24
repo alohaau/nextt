@@ -1,59 +1,61 @@
+/* Общие стили */
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
+/* Шапка */
 .navbar {
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem 0;
+}
+
+.navContainer {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  padding: 20px 0;
-  border-bottom: 1px solid #eee;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 .navLinks {
   display: flex;
-  gap: 20px;
+  gap: 1rem;
 }
 
-.navLink {
-  color: #333;
-  text-decoration: none;
+/* Контент */
+.main {
+  flex: 1;
+  padding: 2rem 0;
 }
 
-.title {
-  font-size: 2rem;
-  margin: 30px 0;
-}
-
-.postGrid {
+/* Посты */
+.postsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
+  gap: 1.5rem;
 }
 
 .postCard {
-  border: 1px solid #ddd;
-  padding: 20px;
+  border: 1px solid #eee;
+  padding: 1rem;
   border-radius: 8px;
 }
 
-.postCategory {
-  background: #e0f2fe;
-  color: #0369a1;
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 0.8rem;
+.postCard:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.postTitle {
-  font-size: 1.2rem;
-  margin: 10px 0;
-}
-
-.readMore {
-  color: #3b82f6;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 10px;
+/* Футер */
+.footer {
+  background: #f8f8f8;
+  padding: 2rem 0;
+  text-align: center;
 }

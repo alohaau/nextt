@@ -1,45 +1,43 @@
-import { GetStaticPaths, GetStaticProps } from 'next'
-import { getAllPostIds, getPostData } from '../../lib/posts'
-import Head from 'next/head'
-import styles from '../../styles/Post.module.css'
+import Layout from '@/components/Layout';
+import { getPostData, getAllPostIds } from '@/lib/posts';
+import styles from '../Blog.module.css';
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = getAllPostIds()
-  return {
-    paths,
-    fallback: false
-  }
-}
-
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const postData = await getPostData(params?.slug as string)
-  return {
-    props: {
-      postData
-    }
-  }
-}
-
-export default function Post({ postData }: {
+type PostPageProps = {
   postData: {
-    title: string
-    date: string
-    contentHtml: string
-  }
-}) {
+    id: string;
+    title: string;
+    date: string;
+    contentHtml: string;
+  };
+};
+
+export default function PostPage({ postData }: PostPageProps) {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>{postData.title}</title>
-      </Head>
-      <article>
-        <h1 className={styles.title}>{postData.title}</h1>
-        <div className={styles.date}>{postData.date}</div>
+    <Layout title={postData.title}>
+      <article className={styles.post}>
+        <h1 className={styles.postTitle}>{postData.title}</h1>
         <div 
-          className={styles.content} 
+          className={styles.postContent} 
           dangerouslySetInnerHTML={{ __html: postData.contentHtml }} 
         />
       </article>
-    </div>
-  )
+    </Layout>
+  );
+}
+
+export async function getStaticPaths() {
+  const paths = getAllPostIds();
+  return {
+    paths,
+    fallback: false,
+  };
+}
+
+export async function getStaticProps({ params }: { params: { id: string } }) {
+  const postData = await getPostData(params.id);
+  return {
+    props: {
+      postData,
+    },
+  };
 }
