@@ -1,60 +1,34 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-
-// Тип поста
-export type Post = {
-  slug: string
-  title: string
-  date: string
-  readTime?: string
-  category?: string
-  image?: string
-  excerpt?: string
-}
+import { remark } from 'remark'
+import html from 'remark-html'
 
 const postsDirectory = path.join(process.cwd(), 'posts')
 
-// Получение отсортированных данных
-export function getSortedPostsData(): Post[] {
-  const fileNames = fs.readdirSync(postsDirectory)
-  const allPostsData: Post[] = fileNames.map(fileName => {
-    const slug = fileName.replace(/\.md$/, '')
-    const fullPath = path.join(postsDirectory, fileName)
-    const fileContents = fs.readFileSync(fullPath, 'utf8')
-    const matterResult = matter(fileContents)
-
-    return {
-      slug,
-      title: matterResult.data.title,
-      date: matterResult.data.date,
-      readTime: matterResult.data.readTime,
-      category: matterResult.data.category,
-      image: matterResult.data.image || '/default-post.jpg',
-      excerpt: matterResult.data.excerpt || ''
-    }
-  })
-
-  return allPostsData.sort((a, b) => (a.date < b.date ? 1 : -1))
-}
-
-// Получение всех идентификаторов постов для [slug].tsx
 export function getAllPostIds() {
   const fileNames = fs.readdirSync(postsDirectory)
-  return fileNames.map(fileName => ({
-    params: {
-      slug: fileName.replace(/\.md$/, '')
+  return fileNames.map(fileName => {
+    return {
+      params: {
+        slug: fileName.replace(/\.md$/, '')
+      }
     }
-  }))
+  })
 }
 
-// Получение одного поста по slug
-export function getPostData(slug: string) {
+export async function getPostData(slug: string) {
   const fullPath = path.join(postsDirectory, `${slug}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
+
+  // Разбираем front matter
   const matterResult = matter(fileContents)
 
-  const contentHtml = matterResult.content
+  // Конвертируем markdown в HTML
+  const processedContent = await remark()
+    .use(html)
+    .process(matterResult.content)
+  const contentHtml = processedContent.toString()
 
   return {
     slug,
