@@ -125,7 +125,7 @@ export default function Home({ allPostsData }: HomeProps) {
               <Link href="/about" className={styles.navLink}>
                 About Us
               </Link>
-              <Link href="/pages" className={styles.navLink}>
+              <Link href="/pages/index.tsx" className={styles.navLink}>
                 Articles
               </Link>
               <Link href="/contact" className={styles.navLink}>
