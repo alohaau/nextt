@@ -33,9 +33,26 @@ export default function Post({ postData }: {
       <Head>
         <title>{postData.title}</title>
       </Head>
-      <article className={articleStyles.article}>
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-      </article>
-    </div>
+<article className={articleStyles.article}>
+  <h1>{postData.title}</h1>
+
+  {/* Основной текст статьи */}
+  <p>
+    Visiting world-class amusement destinations requires careful ticket planning. Here's what you should know:
+  </p>
+
+  {/* Список */}
+  <ul>
+    <li>Check for seasonal discounts and promotions</li>
+    <li>Compare ticket types: single-day, multi-day, and annual passes</li>
+    <li>Book early for guaranteed entry and better pricing</li>
+    <li>Use official apps for mobile tickets and perks</li>
+  </ul>
+
+  {/* Кнопка назад */}
+  <Link href="/posts" className={articleStyles.backButton}>
+    ← Назад ко всем статьям
+  </Link>
+</article>    </div>
   )
 }
