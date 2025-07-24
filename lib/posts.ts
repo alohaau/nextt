@@ -4,19 +4,16 @@ import matter from 'gray-matter'
 
 const postsDirectory = path.join(process.cwd(), 'posts')
 
-export type Post = {
-  slug: string;
-  title: string;
-  date: string;
-  readTime?: string;
-  category?: string;
-  image?: string;
-  excerpt?: string; 
+export type PostData = {
+  slug: string
+  title: string
+  date: string
+  readTime?: string
+  category?: string
+  image?: string
 }
 
-
-
-export function getSortedPostsData(): Post[] {
+export function getSortedPostsData(): PostData[] {
   const fileNames = fs.readdirSync(postsDirectory)
   const allPostsData = fileNames.map(fileName => {
     const slug = fileName.replace(/\.md$/, '')
@@ -40,15 +37,13 @@ export function getSortedPostsData(): Post[] {
     }
 
     return {
-  slug,
-  title: data.title,
-  date: data.date,
-  readTime: data.readTime,
-  category: data.category,
-  image: data.image,
-  excerpt: data.excerpt ?? matterResult.content.slice(0, 160).replace(/\n/g, ' ') + '...', // fallback если нет excerpt в frontmatter
-}
-
+      slug,
+      title: data.title,
+      date: data.date,
+      readTime: data.readTime,
+      category: data.category,
+      image: data.image,
+    }
   })
 
   return allPostsData.sort((a, b) => {
