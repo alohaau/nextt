@@ -128,7 +128,7 @@ export default function Home({ allPostsData }: HomeProps) {
               <Link href="/" className={styles.navLink}>
                 Articles
               </Link>
-              <Link href="/contact" className={styles.navLink}>
+              <Link href="/privacy-policy" className={styles.navLink}>
                 Privacy policy
               </Link>
             </div>
@@ -261,9 +261,8 @@ export default function Home({ allPostsData }: HomeProps) {
         <div className={styles.footerContent}>
           <div className={styles.footerLinks}>
             <Link href="/about">About Us</Link>
-            <Link href="/privacy">Privacy Policy</Link>
-            <Link href="/terms">Terms of Service</Link>
-            <Link href="/contact">Contact</Link>
+            <Link href="/">Articles</Link>
+            <Link href="/privacy-policy">Privacy policy</Link>
           </div>
           <p>&copy; {new Date().getFullYear()} DisneyWorldTicket.com - Independent Theme Park Resource. Not affiliated with The Walt Disney Company.</p>
           <p className={styles.disclaimer}>

@@ -32,14 +32,14 @@
 .logo {
   font-size: 1.6rem;
   font-weight: 700;
-  color: #2c3e50;
+  color: #3498db;
   text-decoration: none;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   transition: color 0.3s ease;
 }
 
 .logo:hover {
-  color: #3498db;
+  color: #0e598a;
 }
 
 /* Burger menu button */
