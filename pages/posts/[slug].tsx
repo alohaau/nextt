@@ -1,7 +1,8 @@
 import { GetStaticPaths, GetStaticProps } from 'next'
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import Head from 'next/head'
-import styles from '../../styles/Post.module.css'
+import postStyles from '../../styles/Post.module.css'
+import articleStyles from '../../styles/article.module.css'
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = getAllPostIds()
@@ -28,15 +29,14 @@ export default function Post({ postData }: {
   }
 }) {
   return (
-    <div className={styles.container}>
+    <div className={postStyles.container}>
       <Head>
         <title>{postData.title}</title>
       </Head>
-      <article>
-        <h1 className={styles.title}>{postData.title}</h1>
-        <div className={styles.date}>{postData.date}</div>
+      <article className={articleStyles.article}>
+        <h1>{postData.title}</h1>
+        <div className={postStyles.date}>{postData.date}</div>
         <div 
-          className={styles.content} 
           dangerouslySetInnerHTML={{ __html: postData.contentHtml }} 
         />
       </article>
