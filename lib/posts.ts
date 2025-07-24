@@ -4,7 +4,7 @@ import matter from 'gray-matter'
 
 const postsDirectory = path.join(process.cwd(), 'posts')
 
-export type PostData = {
+export type Post = {
   slug: string
   title: string
   date: string
@@ -13,7 +13,8 @@ export type PostData = {
   image?: string
 }
 
-export function getSortedPostsData(): PostData[] {
+
+export function getSortedPostsData(): Post[] {
   const fileNames = fs.readdirSync(postsDirectory)
   const allPostsData = fileNames.map(fileName => {
     const slug = fileName.replace(/\.md$/, '')
