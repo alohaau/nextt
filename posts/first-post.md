@@ -5,6 +5,7 @@ readTime: "5 min"
 category: "Dining"
 image: "/image.jpg"
 ---
+# Understanding Theme Park Admission Systems
 
 ## Understanding Theme Park Admission Systems
 
